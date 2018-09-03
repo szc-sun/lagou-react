@@ -1,0 +1,35 @@
+{
+  "name": "myreact",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.18.0",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "1.1.4",
+    "vue-router": "^3.0.1"
+  },
+  "scripts": {
+    "start": "set port =9090 && react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "proxy": {
+    "/lg": {
+      "target":"https://m.lagou.com",
+      "changeOrigin":true,
+      "pathRewrite":{  
+        "^/lg":""
+      }
+    },
+    "/anhao": {
+      "target":"http://localhost:3000",
+      " changeOrigin":true,
+      "pathRewrite":{ 
+      "^/anhao":""
+      }
+    } 
+  }
+}
